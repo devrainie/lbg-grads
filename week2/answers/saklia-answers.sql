@@ -34,6 +34,25 @@ select film_id, title, rating
 from film
 where rating = "R";
 
+################### QUESTION 7
+
+select film_id, title, rating
+from film
+where rating != "R";
+
+################### QUESTION 8
+
+select film_id, title, length
+from film 
+order by length asc 
+limit 10;
+
+################### QUESTION 9
+
+select film_id, title, length
+from film
+where length = 185
+order by length desc;
 
 
 
