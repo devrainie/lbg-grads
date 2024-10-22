@@ -54,6 +54,21 @@ from film
 where length = 185
 order by length desc;
 
+################### QUESTION 9
 
+select film_id, title, special_features
+from film
+where special_features = "Deleted Scenes";
 
+################### QUESTION 10
+
+select last_name, count(last_name) as surname_total
+from actor
+group by last_name
+having surname_total = 1
+order by last_name desc;
+
+################### QUESTION 11
+
+select
 
