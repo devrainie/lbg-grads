@@ -70,5 +70,41 @@ order by last_name desc;
 
 ################### QUESTION 11
 
+select last_name, count(last_name) as surname_total
+from actor
+group by last_name
+having surname_total > 1
+order by surname_total desc;
+
+################### QUESTION 12
+create view actor_films
+as
 select
+	a.actor_id as actor_id,
+    a.first_name,
+    a.last_name,
+    fa.film_id as fa_film_id
+from actor as a
+inner join film_actor as fa
+on a.actor_id = fa.actor_id;
+
+select * from actor_films;
+
+select first_name, last_name, count(first_name), count(last_name)
+from actor_films
+group by first_name, last_name
+order by count(first_name) desc;
+
+# susan davis appears in the most films
+################### QUESTION 13
+
+select film_id, title, rental_duration
+from film
+
+################### QUESTION 14
+
+
+
+################### QUESTION 15
+
 
